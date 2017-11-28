@@ -13,6 +13,20 @@ using namespace std;
 
 class MyString
 {
+private:
+    int nlength;
+    unique_ptr<char[]> internalCString;
+
+public:
+
+    char *getInternalCString() const;
+    int getNlength() const;
+    void reverseit();
+    int compareStr(const MyString &Ihs, const MyString &rths);
+
+    MyString::MyString();
+    MyString::MyString(const char *cString);
+
 };
 
 #endif //HW7_MYSTRING_H
