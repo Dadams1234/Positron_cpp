@@ -25,9 +25,10 @@ int MyString::compareStr(const MyString & Ihs, const MyString & rths)
 
 MyString::MyString()
 {
+	internalCString[""];
 }
 
-MyString::MyString(const char * cString)
+MyString::MyString(const char * cString):
 {
-
+	internalCString = make_unique<char[]>(cString);
 }
