@@ -24,8 +24,10 @@ public:
     void reverseit();
     int compareStr(const MyString &Ihs, const MyString &rths);
 
-    MyString::MyString();
-    MyString::MyString(const char *cString);
+    MyString ();
+    MyString (const char *cString);
+
+    friend ostream &operator<<(ostream &os, const MyString &myString);
 
 };
 

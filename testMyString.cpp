@@ -37,6 +37,7 @@ TEST_CASE("2) Testing MyString Empty")
 /*!
  * @test 3) Testing MyString Compare Method
  */
+/*
 TEST_CASE("3) Testing MyString Compare")
 {
     INFO("3) Testing MyString Compare");
@@ -69,9 +70,11 @@ TEST_CASE("3) Testing MyString Compare")
         REQUIRE(ms1.compareStr(ms1, ms3) == -2);
     }
 }
+*/
 /*!
  * @test 4) Testing MyString Revert Method
- */
+ *//*
+
 TEST_CASE("4) Testing MyString Revert")
 {
     INFO("4) Testing MyString Revert");
@@ -87,11 +90,12 @@ TEST_CASE("4) Testing MyString Revert")
         REQUIRE(s2 == "321olleH");
     }
 }
+*/
 
 /*!
  * @test 5) Testing MyString << opeartor
  */
-/*TEST_CASE("5) Testing MyString << operator")
+TEST_CASE("5) Testing MyString << operator")
 {
     INFO("5) Testing MyString << operator");
     MyString ms("Hello123");
@@ -101,4 +105,4 @@ TEST_CASE("4) Testing MyString Revert")
         std::cout<<"5.1 Test <<operator"<<endl;
         std::cout<<ms<<endl;
     }
-}*/
+}
