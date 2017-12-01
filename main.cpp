@@ -5,10 +5,10 @@
 #include <iostream>
 #include <vector>
 #include "MyString.h"
-using namespace std;
+//using namespace std;
 
 // Main Program Program
-/*int main()
+/*int main(void)
 {
     MyString big("big");
 
@@ -49,5 +49,5 @@ using namespace std;
     cout <<"New: "<< littler << endl; //reggib*/
 	
     
-    //return 0;
+  //  return 0;
 //}

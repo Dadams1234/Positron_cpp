@@ -31,4 +31,4 @@ public:
 
 };
 
-#endif //HW7_MYSTRING_H
+#endif HW7_MYSTRING_H

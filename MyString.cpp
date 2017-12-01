@@ -23,13 +23,17 @@ void MyString::reverseit()
 	int count = 0;
 	unique_ptr<char[]> temp;
 	temp = make_unique<char[]>(nlength);
-	for (int j = nlength; j >= 0; j++)
+	for (int j = nlength; j > 0; j--)
 	{
 		temp[count] = internalCString[j];
 		count++;
+		cout << count << endl;
 
 	}
-	internalCString.swap(temp);
+	cout << temp.get() << endl; cout << internalCString.get() << endl;
+
+	
+	cout << temp.get() << endl; cout << internalCString.get() << endl;
 	
 
 }
@@ -44,6 +48,8 @@ int MyString::compareStr(const MyString & Lhs, const MyString & rths)
      * (0) lhs is equivalent to rhs, both in length and string
      * (-2) lhs is equivalent to rhs only in length, as the string in different
      */
+	
+	cout << Lhs.getNlength() << Lhs.getInternalCString() << endl << rths.getNlength() << rths.getInternalCString() << endl;
 	if (Lhs.getNlength() > rths.getNlength())
 	{
 		return 1;
@@ -52,13 +58,17 @@ int MyString::compareStr(const MyString & Lhs, const MyString & rths)
 	{
 		return -1;
 	}
-	else if (Lhs.getNlength() == rths.getNlength() && Lhs.getInternalCString() == rths.getInternalCString())
+	else if (Lhs.nlength == rths.nlength)
 	{
-		return 0;
-	}
-	else if (Lhs.getNlength() == rths.getNlength() && Lhs.getInternalCString() != rths.getInternalCString())
-	{
-		return -2;
+		if (strcmp(Lhs.internalCString.get(), rths.internalCString.get()) == 1)
+		{
+			return -2;
+		}
+		if (strcmp(Lhs.internalCString.get(), rths.internalCString.get()) == 0)
+		{
+			return 0;
+		}
+	
 	}
 
 
@@ -89,7 +99,7 @@ MyString::MyString(const char * cString)
         i++;
     }
 
-    nlength = i + 1;
+    nlength = i;
 
     internalCString = make_unique<char[]>(nlength);
 
