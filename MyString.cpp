@@ -17,23 +17,18 @@ int MyString::getNlength() const
 {
 	return nlength;
 }
-// creates temp unique_ptr and reverses internalCString than swaps the two
+// creates temp char and reverses internalCString than swaps the two
 void MyString::reverseit()
 {
-	int count = 0;
-	unique_ptr<char[]> temp;
-	temp = make_unique<char[]>(nlength);
-	for (int j = nlength; j > 0; j--)
+	int count = nlength ;
+		
+	for (int j = 0; j <= (nlength/2)-1; j++)
 	{
-		temp[count] = internalCString[j];
-		count++;
-		cout << count << endl;
-
+		swap(internalCString[j], internalCString[nlength - j - 1]);
+		cout << internalCString.get() << endl;
+		
 	}
-	cout << temp.get() << endl; cout << internalCString.get() << endl;
-
 	
-	cout << temp.get() << endl; cout << internalCString.get() << endl;
 	
 
 }
@@ -41,15 +36,9 @@ void MyString::reverseit()
 // and the content of said MyString Objects
 int MyString::compareStr(const MyString & Lhs, const MyString & rths)
 {
-    /*
-     * quick tip delete when finihed
-     * (1) Left Hand Side (lhs) is greater than Right Hand Side (rhs)
-     * (-1) lhs is less than rhs
-     * (0) lhs is equivalent to rhs, both in length and string
-     * (-2) lhs is equivalent to rhs only in length, as the string in different
-     */
+  
 	
-	cout << Lhs.getNlength() << Lhs.getInternalCString() << endl << rths.getNlength() << rths.getInternalCString() << endl;
+	
 	if (Lhs.getNlength() > rths.getNlength())
 	{
 		return 1;
@@ -67,6 +56,7 @@ int MyString::compareStr(const MyString & Lhs, const MyString & rths)
 		if (strcmp(Lhs.internalCString.get(), rths.internalCString.get()) == 0)
 		{
 			return 0;
+		
 		}
 	
 	}
