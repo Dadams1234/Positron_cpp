@@ -25,7 +25,7 @@ void MyString::reverseit()
 	for (int j = 0; j <= (nlength/2)-1; j++)
 	{
 		swap(internalCString[j], internalCString[nlength - j - 1]);
-		cout << internalCString.get() << endl;
+		
 		
 	}
 	
