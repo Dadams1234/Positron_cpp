@@ -20,6 +20,16 @@ int MyString::getNlength() const
 
 void MyString::reverseit()
 {
+	unique_ptr<char[]> temp;
+	temp = make_unique<char[]>(nlength);
+	for (int j = nlength; j >= 0; j++)
+	{
+		temp[j] = internalCString[j];
+
+	}
+	internalCString.swap(temp);
+	
+
 }
 
 int MyString::compareStr(const MyString & Lhs, const MyString & rths)

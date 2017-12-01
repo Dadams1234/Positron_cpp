@@ -4,8 +4,9 @@
 //
 #include <iostream>
 #include <vector>
-using namespace std;
 #include "MyString.h"
+using namespace std;
+
 // Main Program Program
 int main()
 {
@@ -13,7 +14,7 @@ int main()
 
     string s1 = big.getInternalCString();
     //cout<<s1<<endl;
-	/*
+	
     MyString saw("saw");
     MyString bigger("bigger");
     MyString little("little");
@@ -47,6 +48,6 @@ int main()
     littler.reverseit();
     cout <<"New: "<< littler << endl; //reggib
 	
-    */
+    
     return 0;
 }
