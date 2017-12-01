@@ -22,7 +22,7 @@ public:
     char *getInternalCString() const;
     int getNlength() const;
     void reverseit();
-    int compareStr(const MyString &Ihs, const MyString &rths);
+    int compareStr(const MyString &Lhs, const MyString &rths);
 
     MyString ();
     MyString (const char *cString);

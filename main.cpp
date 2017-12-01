@@ -3,16 +3,17 @@
 // Copyright (c) 2017 WSU
 //
 #include <iostream>
+#include <vector>
 using namespace std;
 #include "MyString.h"
 // Main Program Program
-int main(void)
+int main()
 {
     MyString big("big");
 
     string s1 = big.getInternalCString();
     cout<<s1<<endl;
-/*
+
     MyString saw("saw");
     MyString bigger("bigger");
     MyString little("little");
@@ -44,6 +45,6 @@ int main(void)
     cout <<"Original: "<< littler << endl; //reggib
     littler.reverseit();
     cout <<"New: "<< littler << endl; //reggib
-    */
+    
     return 0;
 }

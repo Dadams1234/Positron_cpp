@@ -2,6 +2,7 @@
 // Created by Hugo Valle on 11/12/17.
 //
 #include <memory>
+#include <algorithm>
 #include "MyString.h"
 
 char * MyString::getInternalCString() const
@@ -21,7 +22,7 @@ void MyString::reverseit()
 {
 }
 
-int MyString::compareStr(const MyString & Ihs, const MyString & rths)
+int MyString::compareStr(const MyString & Lhs, const MyString & rths)
 {
     /*
      * quick tip delete when finihed
@@ -30,7 +31,25 @@ int MyString::compareStr(const MyString & Ihs, const MyString & rths)
      * (0) lhs is equivalent to rhs, both in length and string
      * (-2) lhs is equivalent to rhs only in length, as the string in different
      */
-	return 0;
+	if (Lhs.nlength > rths.nlength)
+	{
+		return 1;
+	}
+	else if (Lhs.nlength < rths.nlength)
+	{
+		return -1;
+	}
+	else if (Lhs.nlength == rths.nlength && Lhs.internalCString == rths.internalCString)
+	{
+		return 0;
+	}
+	else if (Lhs.nlength == rths.nlength && Lhs.internalCString != rths.internalCString)
+	{
+		return -2;
+	}
+
+
+	return -3;
 }
 
 /*!
