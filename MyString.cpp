@@ -17,7 +17,7 @@ int MyString::getNlength() const
 {
 	return nlength;
 }
-
+// creates temp unique_ptr and reverses internalCString than swaps the two
 void MyString::reverseit()
 {
 	unique_ptr<char[]> temp;
@@ -31,7 +31,8 @@ void MyString::reverseit()
 	
 
 }
-
+// compares nlength of MyString objects and returns a number depending on their length 
+// and the content of said MyString Objects
 int MyString::compareStr(const MyString & Lhs, const MyString & rths)
 {
     /*
