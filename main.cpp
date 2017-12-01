@@ -8,14 +8,14 @@
 using namespace std;
 
 // Main Program Program
-int main()
+/*int main()
 {
     MyString big("big");
 
     string s1 = big.getInternalCString();
     //cout<<s1<<endl;
 	
-    MyString saw("saw");
+   /* MyString saw("saw");
     MyString bigger("bigger");
     MyString little("little");
     MyString littler("littler");
@@ -46,8 +46,8 @@ int main()
 
     cout <<"Original: "<< littler << endl; //reggib
     littler.reverseit();
-    cout <<"New: "<< littler << endl; //reggib
+    cout <<"New: "<< littler << endl; //reggib*/
 	
     
-    return 0;
-}
+    //return 0;
+//}

@@ -44,19 +44,19 @@ int MyString::compareStr(const MyString & Lhs, const MyString & rths)
      * (0) lhs is equivalent to rhs, both in length and string
      * (-2) lhs is equivalent to rhs only in length, as the string in different
      */
-	if (Lhs.nlength > rths.nlength)
+	if (Lhs.getNlength() > rths.getNlength())
 	{
 		return 1;
 	}
-	else if (Lhs.nlength < rths.nlength)
+	else if (Lhs.getNlength() < rths.getNlength())
 	{
 		return -1;
 	}
-	else if (Lhs.nlength == rths.nlength && Lhs.internalCString == rths.internalCString)
+	else if (Lhs.getNlength() == rths.getNlength() && Lhs.getInternalCString() == rths.getInternalCString())
 	{
 		return 0;
 	}
-	else if (Lhs.nlength == rths.nlength && Lhs.internalCString != rths.internalCString)
+	else if (Lhs.getNlength() == rths.getNlength() && Lhs.getInternalCString() != rths.getInternalCString())
 	{
 		return -2;
 	}
