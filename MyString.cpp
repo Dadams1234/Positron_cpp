@@ -20,11 +20,13 @@ int MyString::getNlength() const
 // creates temp unique_ptr and reverses internalCString than swaps the two
 void MyString::reverseit()
 {
+	int count = 0;
 	unique_ptr<char[]> temp;
 	temp = make_unique<char[]>(nlength);
 	for (int j = nlength; j >= 0; j++)
 	{
-		temp[j] = internalCString[j];
+		temp[count] = internalCString[j];
+		count++;
 
 	}
 	internalCString.swap(temp);
